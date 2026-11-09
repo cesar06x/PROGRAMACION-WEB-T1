@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <title>Mi perfil profesional - HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="./css/perfil.css">
+    </head>
+
+    <body>
+        <div class="contenedor">
+            <header class="encabezado">
+                <div><img src="./Recursos/perfil.jpeg" alt="perfil" class="imagen"><br></div>
+                <div class="encabezado-texto">
+                    <p class="etiqueta">Estudiante de Ingeniería del Desarrollo de Software</p>
+                    <h1>Mathews Said Pastor Hernandez</h1>
+                </div>
+            </header>
+            
+            <section class="seccion">
+                <div class="titulo">
+                    <h2><span class="num">01.</span>Descripción profesional</h2>
+                </div>    
+                <p>
+                    Estudiante de Ingeniería de Software en la Universidad de las Fuerzas Armadas ESPE, con una sólida base en ciencias exactas y lógica matemática. Cuento con formación académica en desarrollo de software y arquitectura MVC. Me destaco por mi capacidad de análisis, curiosidad por nuevas tecnologías y resolución de problemas complejos. Busco una oportunidad de crecimiento profesional donde pueda aportar mi disciplina y consolidar mis habilidades de programación en proyectos reales.
+                </p>
+                
+            </section>
+
+            <section class="seccion">
+                <div class="titulo">
+                    <h2><span class="num">02.</span>Formación académica</h2>
+                </div>
+                <ul class="formacion">
+                    <li>
+                        <div>
+                            <strong>BACHILLER EN CIENCIAS</strong>
+                            <p class="fecha">Sep 2023 - Jun 2024</p>
+                        </div>
+                        <a href= "http://johannstrauss.edu.ec/" target="_blank">Unidad Educativa Johann Strauss</a>
+                    </li>
+                    <br>
+                    <li>
+                        <div>
+                            <strong>ESTUDIANTE DE INGENIERÍA DE SOFTWARE</strong>
+                            <p class="fecha">En curso</p>
+                        </div>
+                        <a href="https://www.espe.edu.ec/" target="_blank">Universidad de las Fuerzas Armadas - ESPE</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="seccion">
+                <div class="titulo">
+                    <h2><span class="num">03.</span>Áreas de interés</h2>
+                </div>
+                <p>Mi enfoque principal e interés de especialización se centra en la infraestructura, datos y seguridad como:</p>
+                <br>
+                <div class="intereses">
+                    <div class="interes">QA - Aseguramiento de la Calidad</div>
+                    <div class="interes">Cyberseguridad</div>
+                    <div class="interes">Inteligencia Artificial y Ciencia de Datos</div>
+                </div> 
+                <br>
+                <p>Sin embargo, también estoy interesado en el desarrollo de aplicaciones y plataformas:</p>
+                <br>
+                <div class="intereses">
+                    <div class="interes">Desarrollo de Videojuegos</div>
+                    <div class="interes">Desarrollo Frontend</div>
+                </div>
+            </section>
+            
+            <section class="seccion">
+                <div class="titulo">
+                    <h2><span class="num">04.</span>Formulario</h2>
+                </div>
+                
+                <form action="./procesar.php" method="GET">
+                <label for="nombre"><strong>Nombre:</strong></label>
+                <input type="text" id="nombre" name="nombre" class="campo-formulario" required>
+
+                <label for="correo"><strong>Correo:</strong></label>
+                <input type="email" id="correo" name="correo" class="campo-formulario" required>
+                
+                <label for="fecha"><strong>Fecha de Nacimiento:</strong></label>
+                <input type="date" id="fecha" name="fecha" class="campo-formulario" required>
+                
+                <p class="titulo-form"><strong>Modalidad</strong></p>
+                <input type="radio" name="matutina" id="matutina" value="matutina">
+                <label for="matutina">Matutina</label><br>
+                <input type="radio" name="vespertina" id="verpertina" value="vespertina">
+                <label for="vespertina">Vespertina</label><br>
+                <input type="radio" name="nocturna" id="nocturna" value="nocturna">
+                <label for="nocturna">Nocturna</label><br>
+                <br>
+                <p class="titulo-form"><strong>Áreas de interés</strong></p>
+                <input type="checkbox" name="qa" id="qa" value="qa">
+                <label for="qa">QA - Aseguramiento de la Calidad</label><br>
+                <input type="checkbox" name="cyberseguridad" id="cyberseguridad" value="cyberseguridad">
+                <label for="cyberseguridad">Cyberseguridad</label><br>
+                <input type="checkbox" name="ia" id="ia" value="ia">
+                <label for="ia">Inteligencia Artificial y Ciencia de Datos</label><br>
+                <br>
+                <label for="mensaje"><strong>Mensaje:</strong></label>
+                <textarea name="mensaje" id="mensaje" rows="6" class="campo-formulario"></textarea>
+                
+                <button type="submit" class="boton-enviar">ENVIAR</button>
+            </form>
+            </section>
+            
+            <section class="seccion">
+                <div class="titulo">
+                    <h2><span class="num">05.</span>Contacto</h2>
+                </div>
+                <div class="enlaces">   
+                <p><strong>Celular:</strong> 0983249630</p>
+                <p><strong>Correo:</strong> mspastor.h@gmail.com</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/mthws-hub/Programacion-Web-OCT2026-FEB2027" target="_blank">mthws-hub</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mathews-pastor-3a6413389/?isSelfProfile=true" target="_blank">Mathews Pastor</a></p>
+                </div>
+            </section>
+
+            <footer class="pie">
+                &copy; Mathews Pastor
+            </footer>
+        </div>
+    </body>
+</html>
