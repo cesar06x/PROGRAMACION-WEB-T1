@@ -1,8 +1,8 @@
 FROM nginx:alpine
 
-COPY ./index.html /usr/share/nginx/html/index.html
-COPY ./css /usr/share/nginx/html/css
-COPY ./Recursos /usr/share/nginx/html/Recursos
+COPY . /usr/share/nginx/html
 
 
 EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
