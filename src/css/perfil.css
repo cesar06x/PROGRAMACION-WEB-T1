@@ -14,6 +14,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: var(--bg-light);
+}
 html {
     scroll-behavior: smooth;
 }
@@ -36,6 +39,70 @@ html {
 .light-section {
     background-color: var(--bg-light);
     color: var(--text-dark);
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.encabezado-contenido {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.imagen {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    transition: var(--transition);
+    filter: grayscale(20%);
+}
+
+.imagen:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 0 15px 35px rgba(197, 160, 89, 0.2);
+}
+
+.etiqueta {
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.encabezado-texto h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .section-title {
@@ -129,8 +196,43 @@ html {
     color: var(--accent);
 }
 
+.contact-form { 
+    max-width: 600px; 
+    margin: 0 auto; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.contact-form input, .contact-form textarea { 
+    padding: 15px; 
+    border: 1px solid #ccc; 
+    background: transparent; 
+    color: var(--text-dark); 
+    font-size: 1rem; 
+    transition: border 0.3s; 
+}
+
+.contact-form input:focus, .contact-form textarea:focus { 
+    border-color: var(--accent); 
+    outline: none; 
+}
+
 @media (max-width: 768px) {
     .section-title { font-size: 2rem; }
     .skills-grid, .projects-grid { grid-template-columns: 1fr; }
     .timeline { margin-left: 10px; }
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        min-height: 60vh;
+    }
+    .encabezado-texto h1 {
+        font-size: 2.2rem;
+    }
+    .imagen {
+        width: 140px;
+        height: 140px;
+    }
 }
