@@ -1,207 +1,47 @@
+:root {
+    --bg-dark: #2b2b2b;
+    --bg-light: #f4f4f4;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --accent: #c5a059;
+    --transition: all 0.3s ease;
+}
+
 * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
- 
-    body {
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: #f3f4f6;
-      background-color: #0a0a0a;
-    }
- 
-    .contenedor {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 48px 16px;
-    }
- 
-    .encabezado {
-      display: flex;
-      flex-direction: row;
-      gap: 48px;
-      padding: 48px;
-      margin-bottom: 32px;
-      background-color: #111111;
-      border: 1px solid #262626;
-      border-radius: 10px;
-      border-top: 3px solid #3b82f6;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    .imagen {
-        border: 2px solid #3b82f6;
-        border-radius: 25px;
-    }
- 
-    .etiqueta {
-      font-family: "Courier New", monospace;
-      font-size: 14px;
-    }
- 
-    .encabezado-texto h1 {
-      font-size: 40px;
-      line-height: 1.2;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-    }
- 
-    .encabezado-texto p {
-      font-size: 18px;
-      color: #9ca3af;
-    }
- 
-    .seccion {
-      padding: 32px;
-      margin-bottom: 32px;
-      background-color: #111111;
-      border: 1px solid #262626;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-    }
- 
-    .titulo {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: #161616;
-      margin-bottom: 24px;
-    }
- 
-    .titulo h2 {
-      font-size: 24px;
-      font-weight: 700;
-      white-space: nowrap;
-    }
- 
-    .titulo .num {
-      font-family: "Courier New", monospace;
-      font-size: 18px;
-      color: #3b82f6;
-      margin-right: 6px;
-    }
- 
-    .seccion p {
-      color: #9ca3af;
-    }
- 
-    .formacion {
-      list-style: none;
-      margin-left: 8px;
-      padding-left: 32px;
-      border-left: 1px solid #262626;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    .formacion a{
-        color: white;
-    }
-    .formacion a:hover{
-        color: #3b82f6;
-    }
- 
-    .formacion .fecha {
-      font-family: "Courier New", monospace;
-      font-size: 14px;
-      color: #10b981;
-    }
- 
-    .intereses {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
- 
-    .interes {
-      padding: 16px;
-      font-family: "Courier New", monospace;
-      font-size: 14px;
-      color: #d1d5db;
-      background-color: #161616;
-      border: 1px solid #10b981;
-      border-radius: 8px;
-    } 
+.section {
+    padding: 80px 20px;
+}
 
-    .interes:hover {
-        background-color: #10b981;
-    }
-    
-    .enlaces {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-    .enlaces a:hover {
-      color: #3b82f6;
-    }
+.dark-section {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
 
-    .campo-formulario {
-        display: block;
-        width: 100%;
-        margin: 6px 0 24px;
-        padding: 12px 14px;
-        font-family: inherit;
-        font-size: 16px;
-        color: #f3f4f6;
-        background-color: #161616;
-        border: 1px solid #262626;
-        border-radius: 8px;
-    }   
+.light-section {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
 
-    .campo-formulario:focus {
-        border-color: #3b82f6;
-        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-    }
-
-    input[type="date"].campo-formulario {
-        color-scheme: dark;
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-        accent-color: #3b82f6;
-        width: 16px;
-        height: 16px;
-        margin-right: 8px;
-        vertical-align: middle;
-        cursor: pointer;
-    }
-
-    input[type="radio"] + label,
-    input[type="checkbox"] + label {
-        padding: 4px 0;
-        color: #9ca3af;
-        cursor: pointer;
-    }
-
-    .seccion .titulo-form {
-        color: #f3f4f6;
-        margin: 16px 0 8px;
-    }
- 
-    .boton-enviar {
-        padding: 14px 32px;
-        font-family: "Courier New", monospace;
-        font-size: 14px;
-        font-weight: bold;
-        letter-spacing: 1px;
-        color: #ffffff;
-        background-color: #3b82f6;
-        border: 1px solid #3b82f6;
-        border-radius: 8px;
-        cursor: pointer;
-    }
-
-    .boton-enviar:hover {
-        background-color: #2563eb;
-    }
-
-    .pie {
-      text-align: center;
-      font-family: "Courier New", monospace;
-      font-size: 13px;
-      color: #6b7280;
-      padding-top: 16px;
-    }
- 
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
